@@ -1,0 +1,52 @@
+.h5_component_line {
+
+}
+.h5_component_line .line {
+	height: 15px;
+	font-size: 12px;
+	line-height: 15px;
+	margin-bottom: 15px;
+}
+.h5_component_line .name {
+	width: 60px;
+	float: left;
+	color: #000;
+	text-align: center;
+}
+.h5_component_line .rate {
+	height: 15px;
+	margin-left: 5px;
+	float: left;
+	position: relative;
+}
+.h5_component_line .rate .bg {
+	background-color: #990000;
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 5px;
+}
+.h5_component_line .per {
+	width: 20px;
+	color: #990000;
+	margin-left: 5px;
+	float: left;
+	opacity: 0;
+}
+._load .rate .bg{
+	transition: all 1s 0.5s;
+	width: 100%;
+}
+._leave .rate .bg{
+	width: 0;
+}
+
+._leave .per {
+	opacity: 0;
+}
+._load .per {
+	transition: all 1s 1.5s;
+	opacity: 1;
+}

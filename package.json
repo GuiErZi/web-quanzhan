@@ -1,0 +1,25 @@
+{
+  "name": "webquanzhan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuiErZi/web-quanzhan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuiErZi/web-quanzhan/issues"
+  },
+  "homepage": "https://github.com/GuiErZi/web-quanzhan#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
