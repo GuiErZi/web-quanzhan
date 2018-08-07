@@ -1,0 +1,32 @@
+/*
+* @Author: fjz
+* @Date:   2018-08-07 08:18:47
+* @Last Modified by:   fjz
+* @Last Modified time: 2018-08-07 10:59:16
+*/
+.h5_component_polyLine  canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/*background:#eee;*/
+}
+.h5_component_polyLine .text {
+	position: absolute;
+	font-size: 12px;
+	text-align: center;
+	bottom: -20px;
+	height: 20px;
+	line-height: 20px;
+	transform: scale(.8);
+	transition: all 1s 1.5s;
+	opacity: 0;
+}
+._load .text {
+	opacity: 1;
+}
+
+._leave .text {
+	opacity: 0;
+}

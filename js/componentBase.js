@@ -1,8 +1,9 @@
 /*
+/*
 * @Author: fjz
 * @Date:   2018-08-06 16:46:58
 * @Last Modified by:   fjz
-* @Last Modified time: 2018-08-06 20:31:17
+* @Last Modified time: 2018-08-07 08:18:05
 */
 var componentBase = function(name,config) {
 	var config = config || {},
