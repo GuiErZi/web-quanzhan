@@ -2,7 +2,7 @@
 * @Author: fjz
 * @Date:   2018-08-07 21:29:43
 * @Last Modified by:   fjz
-* @Last Modified time: 2018-08-07 22:15:04
+* @Last Modified time: 2018-08-08 15:36:29
 */
 var componentPie = function(name,config) {
 
@@ -81,13 +81,14 @@ var componentPie = function(name,config) {
 		var y = r + Math.cos(0.5*Math.PI - sangel) * r;
 		text.css('left', x/2);
 		text.css('top', y/2);
+		text.css('zIndex', 99)
 		if (x > w/2) {
 			text.css('left',x/2)
 		} else {
 			text.css('right',(w-x)/2);
 		}
 
-		if (y >h/2) {
+		if (y > h/2) {
 			text.css('top',y/2);
 		} else {
 			text.css('bottom',(h-y)/2)

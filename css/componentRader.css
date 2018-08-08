@@ -2,18 +2,18 @@
 * @Author: fjz
 * @Date:   2018-08-07 19:59:37
 * @Last Modified by:   fjz
-* @Last Modified time: 2018-08-07 21:02:45
+* @Last Modified time: 2018-08-08 14:36:13
 */
 
 
-.h5_component_Rader canvas {
+.h5_component_rader canvas {
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
 }
-.h5_component_Rader .text {
+.h5_component_rader .text {
 	position: absolute;
 	font-size:12px;
 	transition: all 1s;

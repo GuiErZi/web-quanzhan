@@ -198,6 +198,260 @@
 					},
 					delay: 500
 				})
+
+			.addPage()
+				.addComponent('caption',{
+					text:'课程分布方向'
+				})
+				.addComponent('polyLine',{
+					type : 'polyLine',
+					width : 530,
+					height : 400,
+					data: [
+						['JavaScript',.4,'red'],
+						['HTML/CSS',.2],
+						['CSS3',.25],
+					],
+					css: {
+						top: 100,
+						opacity:0
+					},
+					animateIn: {
+						opacity: 1,
+						top: 200
+					},
+					animateOut : {
+						opacity: 0,
+						top: 100
+					},
+					center: true
+				})
+				.addComponent('msg', {
+					text:'前端开发课程占到40%',
+					css: {
+						opacity: 0,
+						top: 150,
+						textAlign:'center',
+						width: '100%',
+						color:'#f00'
+					},
+					animateIn: {
+						opacity:1
+					},
+					animateOut:{
+						opacity:0
+					}
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:'移动开发课程资源'
+				})
+				.addComponent('pie', {
+					type : 'pie',
+					width : 400,
+					height : 400,
+					data: [
+						['JavaScript',.4,'red'],
+						['HTML/CSS',.2],
+						['CSS3',.15],
+						['CSS3',.13],
+						['CSS3',.12]
+					],
+					css: {
+						top: 300,
+						opacity: 0
+					},
+					animateIn: {
+						opacity: 1,
+						top: 200
+					},
+					animateOut : {
+						opacity: 0,
+						top: 300
+					},
+					center: true
+				})
+				.addComponent('msg', {
+					text:'移动开发课程占到40%',
+					css: {
+						opacity: 0,
+						bottom: 80,
+						textAlign:'center',
+						width: '100%',
+						color:'#f00'
+					},
+					animateIn: {
+						opacity:1
+					},
+					animateOut:{
+						opacity:0
+					}
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:'前端开发课程'
+				})
+				.addComponent('line', {
+					type : 'line',
+					width : 530,
+					height : 600,
+					data: [
+						['JavaScript',.4,'red'],
+						['HTML/CSS',.2],
+						['CSS3',.25],
+						['HTML5',.29],
+						['BOOTSTRAP',.12],
+						['JQUERY',.32],
+						['REACTJS',.52]
+						],
+					css: {
+						top: 100,
+						opacity: 0
+					},
+					animateIn: {
+						opacity: 1,
+						top: 200
+					},
+					animateOut : {
+						opacity: 0,
+						top: 100
+					},
+					center: true
+				})
+				.addComponent('msg', {
+					text:'前端开发课程占到40%',
+					css: {
+						opacity: 0,
+						bottom: 80,
+						textAlign:'center',
+						width: '100%',
+						color:'#f00'
+					},
+					animateIn: {
+						opacity:1
+					},
+					animateOut:{
+						opacity:0
+					}
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:'前端开发课程'
+				})
+				.addComponent('linev', {
+					type : 'linev',
+					width : 530,
+					height : 400,
+					data: [
+						['JavaScript',.4,'red'],
+						['HTML/CSS',.2],
+						['CSS3',.25],
+						['HTML5',.29]
+					],
+					css: {
+						top: 200,
+						opacity: 0
+					},
+					animateIn: {
+						opacity: 1,
+						top: 150
+					},
+					animateOut : {
+						opacity: 0,
+						top: 200
+					},
+					center: true
+				})
+				.addComponent('msg', {
+					text:'前端开发课程占到40%',
+					css: {
+						opacity: 0,
+						top: 180,
+						textAlign:'center',
+						width: '100%',
+						color:'#f00'
+					},
+					animateIn: {
+						opacity:1
+					},
+					animateOut:{
+						opacity:0
+					}
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:'后端开发课程'
+				})
+				.addComponent('rader', {
+					type : 'rader',
+					width : 400,
+					height : 400,
+					data: [
+						['JavaScript',.4,'red'],
+						['HTML/CSS',.2],
+						['CSS3',.25],
+						['CSS3',.23],
+						['CSS3',.35]
+					],
+					css: {
+						top: 100,
+						opacity: 0
+					},
+					animateIn: {
+						opacity: 1,
+						top: 200
+					},
+					animateOut : {
+						opacity: 0,
+						top: 100
+					},
+					center: true
+				})
+				.addComponent('msg', {
+					text:'后端开发课程占到40%',
+					css: {
+						opacity: 0,
+						top: 150,
+						textAlign:'center',
+						width: '100%',
+						color:'#f00'
+					},
+					animateIn: {
+						opacity:1
+					},
+					animateOut:{
+						opacity:0
+					}
+				})
+			.addPage()
+				.addComponent('caption',{
+					text:'课程难度分布'
+				})
+				.addComponent('point', {
+					type : 'point',
+					width : 300,
+					height : 300,
+					data: [
+						['高级',.4,'green'],
+						['初级',.2,'blue',-40,'-60%'],
+						['中级',.2,'red',-30,'120%']
+
+					],
+					css: {
+						bottom : 0,
+						opacity : 0
+					},
+					center: true,
+					animateIn : {
+						bottom : '30%',
+						opacity :1
+					},
+					animateOut : {
+						bottom : 0,
+						opacity : 0
+					}
+				})
+				
 			.addPage('tail')
 				.addComponent('logo', {
 					center: true,
@@ -268,7 +522,7 @@
 						console.log(1)
 					}
 				})
-			.loader(3)
+			.loader(4)
 	})
 </script>
 

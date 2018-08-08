@@ -2,7 +2,7 @@
 * @Author: fjz
 * @Date:   2018-08-06 18:58:10
 * @Last Modified by:   fjz
-* @Last Modified time: 2018-08-08 12:32:35
+* @Last Modified time: 2018-08-08 14:15:19
 */
 var H5 = function () {
 	this.id = ('h5_' + Math.random()).replace('.','_');
@@ -32,13 +32,31 @@ var H5 = function () {
 		var config = config || {},
 			component,
 			page = this.page.slice(-1)[0];
-		config = $.extend({
+			config = $.extend({
 			type : 'base'
 		}, config);
 
 		switch(config.type) {
 			case 'base':
 				component = new componentBase(name,config);//将componentBase组件中的数据传递进来
+			break;
+			case 'polyLine':
+				component = new componentPolyLine(name, config);
+			break;
+			case 'line':
+				component = new componentLine(name, config);
+			break;
+			case 'rader':
+				component = new componentRader(name, config);
+			break;
+			case 'linev':
+				component = new componentLine_v(name, config);
+			break;
+			case 'pie':
+				component = new componentPie(name, config);
+			break;
+			case 'point':
+				component = new componentPoint(name, config);
 			break;
 		}
 		page.append(component)

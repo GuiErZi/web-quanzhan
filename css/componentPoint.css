@@ -2,11 +2,11 @@
 * @Author: fjz
 * @Date:   2018-08-06 20:40:33
 * @Last Modified by:   fjz
-* @Last Modified time: 2018-08-06 21:15:36
+* @Last Modified time: 2018-08-08 14:51:25
 */
 /*散点图样式*/
 .h5_component_point {
-
+	color: #fff;
 }
 
 .h5_component_point .point {

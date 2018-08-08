@@ -2,7 +2,7 @@
 * @Author: fjz
 * @Date:   2018-08-06 20:39:44
 * @Last Modified by:   fjz
-* @Last Modified time: 2018-08-06 21:16:42
+* @Last Modified time: 2018-08-08 15:27:01
 */
 var componentPoint = function(name,config) {
 	var component = new componentBase(name,config);
@@ -27,7 +27,7 @@ var componentPoint = function(name,config) {
 		if (item[3] !== undefined && item[4] !== undefined) {
 			point.css({
 				'left':item[3],
-				'top':item[4]
+				'top':item[4],
 			})
 		}
 
