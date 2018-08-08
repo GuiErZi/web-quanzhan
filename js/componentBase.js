@@ -3,7 +3,7 @@
 * @Author: fjz
 * @Date:   2018-08-06 16:46:58
 * @Last Modified by:   fjz
-* @Last Modified time: 2018-08-07 08:18:05
+* @Last Modified time: 2018-08-08 12:26:29
 */
 var componentBase = function(name,config) {
 	var config = config || {},
@@ -26,16 +26,26 @@ var componentBase = function(name,config) {
 		})
 	}
 
+	if (typeof config.onclick === 'function') {
+		component.on('click',config.onclick)
+	}
+
 	component.on('onLoad', function(){
-		component.addClass(cls + ' _load').removeClass(' _leave');
-		config.animateIn && component.animate(config.animateIn);
+		setTimeout(function() {
+			component.addClass(cls + ' _load').removeClass(' _leave');
+			config.animateIn && component.animate(config.animateIn);
+		},config.delay || 0)
 
 		return false;
 	});
+	
 	component.on('onLeave',function(){
-		component.addClass(cls + ' _leave').removeClass(' _load');
-		config.animateOut && component.animate(config.animateOut);
 
+		setTimeout( function () {
+			component.addClass(cls + ' _leave').removeClass(' _load');
+			config.animateOut && component.animate(config.animateOut);
+		}, config.delay || 0)
+		
 		return false;
 	});
 	

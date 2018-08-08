@@ -2,7 +2,7 @@
 * @Author: fjz
 * @Date:   2018-08-06 18:58:10
 * @Last Modified by:   fjz
-* @Last Modified time: 2018-08-06 20:30:12
+* @Last Modified time: 2018-08-08 12:32:35
 */
 var H5 = function () {
 	this.id = ('h5_' + Math.random()).replace('.','_');
@@ -22,6 +22,9 @@ var H5 = function () {
 		}
 		this.el.append(page);
 		this.page.push(page)
+		if (typeof this.whenAddPage === 'function') {
+			this.whenAddPage()
+		}
 		return this;
 	};
 	//新增一个组件
@@ -42,7 +45,7 @@ var H5 = function () {
 
 		return this;
 	}
-	this.loader = function() {
+	this.loader = function(firstPage) {
 		this.el.fullpage({
 			onLeave: function(index, nextIndex, direction) {
 			$(this).find('.h5_component').trigger('onLeave');
@@ -53,6 +56,9 @@ var H5 = function () {
 		})
 		this.page[0].find('.h5_component').trigger('onLoad');
 		this.el.show()
+		if (firstPage) {
+			$.fn.fullpage.moveTo(firstPage)
+		}
 	}
 	return this;
 }
