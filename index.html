@@ -10,25 +10,35 @@
 
 <!-- 加载h5组件相关资源 -->
 <script>
+
 	var resource = [
 		'Base','Line','Line_v','Point','PolyLine','Rader','Pie'
-	];
-	var html =[];
-	for( s in resource) {
+	];//总共有六个图表文组件、8个页面
+
+	var html =[];//初始化即将引入的入口页面所依赖的基础组件与其余组件的js与css
+
+	for( s in resource ) {
+
 		html.push('<script src="js/component'+ resource[s] + '.js"><\/script>');
 		html.push('<link rel="stylesheet" type="text/css" href="css/component'+ resource[s] + '.css">');
+
 	}
+
 	document.write(html.join(''));
 </script>
-<!-- 加载h5对象 -->
-<script type="text/javascript" src="js/test_h5.js"></script>
-<link rel="stylesheet" type="text/css" href="css/test_h5.css">
 
-<!-- 主要逻辑 -->
+<!-- 加载h5对象,h5对象的主要内容是新增页与新增组件 -->
+<script type="text/javascript" src="js/test_h5.js"></script>
+
+
+<!-- 主要逻辑，这里是对各个组件的样式进行设置。主要涉及标题、宽高、文本、css、透明度、对齐、文本颜色、字体大小、top、opacity、animate等内容 -->
+
+<!-- 第一步 -->
 <script type="text/javascript">
 	$(function() {
 		var h5 = new H5();
 
+			// 统一添加footer组件
 			h5.whenAddPage = function() {
 				this.addComponent('slideUp', {
 					bg: 'img/footer.png',
@@ -130,7 +140,7 @@
 						bottom: -50
 					},
 					delay: 1000
-				})
+				})//首页
 			.addPage()
 				.addComponent('caption',{text: '核心理念'})
 				.addComponent('text', {
@@ -197,8 +207,7 @@
 						bottom: 0
 					},
 					delay: 500
-				})
-
+				})//核心理念
 			.addPage()
 				.addComponent('caption',{
 					text:'课程分布方向'
@@ -241,8 +250,8 @@
 					animateOut:{
 						opacity:0
 					}
-				})
-			.addPage()
+				})//课程分布方向//课程分布方向
+			.addPage()//移动开发
 				.addComponent('caption',{
 					text:'移动开发课程资源'
 				})
@@ -287,7 +296,7 @@
 						opacity:0
 					}
 				})
-			.addPage()
+			.addPage()//前端开发课程0
 				.addComponent('caption',{
 					text:'前端开发课程'
 				})
@@ -334,7 +343,7 @@
 						opacity:0
 					}
 				})
-			.addPage()
+			.addPage()//前端开发课程
 				.addComponent('caption',{
 					text:'前端开发课程'
 				})
@@ -378,7 +387,7 @@
 						opacity:0
 					}
 				})
-			.addPage()
+			.addPage()//后端开发课程
 				.addComponent('caption',{
 					text:'后端开发课程'
 				})
@@ -423,7 +432,7 @@
 						opacity:0
 					}
 				})
-			.addPage()
+			.addPage()//课程难度分布
 				.addComponent('caption',{
 					text:'课程难度分布'
 				})
@@ -451,7 +460,6 @@
 						opacity : 0
 					}
 				})
-				
 			.addPage('tail')
 				.addComponent('logo', {
 					center: true,
@@ -522,7 +530,7 @@
 						console.log(1)
 					}
 				})
-			.loader(4)
+			.loader(1)
 	})
 </script>
 
@@ -533,13 +541,19 @@
 		padding: 0;
 	}
 	.h5_page {
+		position: relative;
+		width: 100%;
 		background: url(img/page_bg.png);
 	}
+
 	.h5_page_face {
 		background-image: url(img/face_bg.png)
 	}
 	.h5_component_name_slogan {
 		animation: rock 2s infinite 1.5s;
+	}
+	.h5_component {
+	position: absolute;
 	}
 	@keyframes rock {
 		0% {
@@ -589,13 +603,11 @@
 		}
 	}
 </style>
-<!-- 载入所有ziyuan -->
+
 </head>
 
 
 <body>
-
-	
 
 </body>
 </html>
